@@ -1,21 +1,22 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth ,createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth } from "firebase/auth";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBR8EGOkEE6c-aFhlHjwVEKXwwM1mC3BxM",
-  authDomain: "react-2-55964.firebaseapp.com",
-  projectId: "react-2-55964",
-  storageBucket: "react-2-55964.appspot.com",
-  messagingSenderId: "793099262133",
-  appId: "1:793099262133:web:ba709e27cd3212f058c6fc"
+  apiKey: "AIzaSyCYxWCy68x3_qjJyaZC0194C8sLuGO5fMg",
+  authDomain: "realtor-d2cb7.firebaseapp.com",
+  projectId: "realtor-d2cb7",
+  storageBucket: "realtor-d2cb7.appspot.com",
+  messagingSenderId: "647557545427",
+  appId: "1:647557545427:web:f47a46cd3f72290ddbc326"
 };
 
 // Initialize Firebase
+
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
