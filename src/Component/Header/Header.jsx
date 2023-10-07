@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import style from "./Header.module.css";
 
 const Header = () => {
-  const links = ["Home", "Offers", "Profile"];
+  const links = ["Home", "Offers", "Profile","Signin"];
 
   return (
     <div className={style.container}>
@@ -15,6 +15,7 @@ const Header = () => {
           </NavLink>
         ))}
       </div>
+    
     </div>
   );
 };

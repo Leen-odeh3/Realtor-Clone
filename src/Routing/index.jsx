@@ -1,22 +1,25 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./../Pages/Home";
-import Profile from "./../Pages/Profile";
+import Layout from "../Layout";
+import Home from "../Pages/Home";
 import Offers from "../Pages/Offers";
-import Layout from "./../Layout/index";
-const index = () => {
+import Signin from "../Pages/Signin";
+import Profile from "../Pages/Profile";
+
+const Routing = () => {
   return (
-    <div>
-      <BrowserRouter>
-        <Routes>
-          <Route index element={<Home/>} />
-          <Route path="/Home" element={<Layout />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/offers" element={<Offers />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+          <Route path="/signin" element={<Signin />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
-export default index;
+export default Routing;
