@@ -1,21 +1,20 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import style from "./Header.module.css";
+import "./Header.css";
 
 const Header = () => {
-  const links = ["Home", "Offers", "Profile","Signin"];
 
   return (
-    <div className={style.container}>
-      <img src="assets/logo.png" alt="logo-realtor" width="200px"/>
-      <div className={style.navs}>
-        {links.map((e, index) => (
-          <NavLink to={`/${e}`} key={index}>
-            {e}
-          </NavLink>
-        ))}
+    <div className="container">
+      <img src="assets/logo.png" alt="logo-realtor" width="200px" />
+      <div className="navs">
+
+        <NavLink exact to="/home">Home</NavLink>
+        <NavLink to="/offers">Offers</NavLink>
+        <NavLink to="/profile">Profile</NavLink>
+        <NavLink to="/signin">Signin</NavLink>
+
       </div>
-    
     </div>
   );
 };
