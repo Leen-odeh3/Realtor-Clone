@@ -91,7 +91,8 @@ const Signup = () => {
                 cursor: "pointer",
                 marginBottom: "20px",
               }}
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 createUserWithEmailAndPassword(auth, email, password)
                   .then((userCredential) => {
                     // Signed up

@@ -1,12 +1,22 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import { auth } from './../firebase/Config'; 
 const Profile = () => {
 
   const navigate = useNavigate();
   
+  const handleSignOut = () => {
+    auth.signOut() 
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
+        console.error("Error signing out: ", error);
+      });
+  };
   return (
     <div style={{ backgroundColor: "#def3ea", height: "590px" }}>
+     
       <div
         style={{
           margin: "auto",
@@ -48,7 +58,7 @@ const Profile = () => {
               Do want to change your name?{" "}
               <Link style={{ color: "red" }}>Edit</Link>
             </p>
-            <Link to="/" style={{ color: "#007aff" }}>
+            <Link to="/" style={{ color: "#007aff" }} onClick={handleSignOut}>
               Sign out
             </Link>
           </div>

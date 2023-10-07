@@ -1,7 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react'
+import { Link, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import {auth} from './../firebase/Config'
+
 
 const Signin = () => {
+const Navigate =useNavigate();
+  const [email,setemail]=useState("");
+  const [password,setpassword]=useState("");
+
   return (
     <div style={{ backgroundColor: "#def3ea", height: "590px" }}>
       <div
@@ -16,6 +23,20 @@ const Signin = () => {
         <form style={{ display: "flex", flexDirection: "column" }}>
           <input
             placeholder="Email Address"
+            type="email"
+            style={{
+              padding: "20px",
+              borderRadius: "8px",
+              outline: "none",
+              border: "none",
+              marginTop: "20px",
+            }}
+            onChange={(e) => {
+              setemail(e.target.value);
+            }}
+          />
+          <input
+            placeholder="Password"
             type="text"
             style={{
               padding: "20px",
@@ -24,16 +45,8 @@ const Signin = () => {
               border: "none",
               marginTop: "20px",
             }}
-          />
-          <input
-            placeholder="Password"
-            type="email"
-            style={{
-              padding: "20px",
-              borderRadius: "8px",
-              outline: "none",
-              border: "none",
-              marginTop: "20px",
+            onChange={(e) => {
+              setpassword(e.target.value);
             }}
           />
           <div
@@ -63,6 +76,24 @@ const Signin = () => {
               fontWeight: "600",
               cursor: "pointer",
               marginBottom: "30px",
+            }}
+            onClick={(e) => {
+              
+
+              e.preventDefault();
+              
+Navigate("/home");
+
+              signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                  // Signed in
+                  const user = userCredential.user;
+                  // ...
+                })
+                .catch((error) => {
+                  const errorCode = error.code;
+                  const errorMessage = error.message;
+                });
             }}
           >
             SIGN IN
