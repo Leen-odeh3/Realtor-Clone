@@ -2,13 +2,15 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const Profile = () => {
+
   const navigate = useNavigate();
+  
   return (
     <div style={{ backgroundColor: "#def3ea", height: "590px" }}>
       <div
         style={{
           margin: "auto",
-          width: "50%",
+          width: "40%",
           textAlign: "center",
           padding: "20px",
         }}

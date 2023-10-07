@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react'
 import { Link } from "react-router-dom";
 
-const Signin = () => {
+
+const Forgotpassword = () => {
   return (
     <div style={{ backgroundColor: "#def3ea", height: "590px" }}>
       <div
@@ -25,17 +26,7 @@ const Signin = () => {
               marginTop: "20px",
             }}
           />
-          <input
-            placeholder="Password"
-            type="email"
-            style={{
-              padding: "20px",
-              borderRadius: "8px",
-              outline: "none",
-              border: "none",
-              marginTop: "20px",
-            }}
-          />
+       
           <div
             style={{
               display: "flex",
@@ -45,12 +36,12 @@ const Signin = () => {
           >
             <p style={{ fontSize: "20px", margin: "30px" }}>
               Don't have an account?
-              <Link to="/signup" style={{ color: "red", paddingLeft: "10px" }}>
+              <Link style={{ color: "red", paddingLeft: "10px" }}>
                 Register
               </Link>
             </p>
-            <Link to="/Forgotpassword?" style={{ color: "#007aff" }}>
-              Forgot password?
+            <Link to="/Signin" style={{ color: "#007aff" }}>
+            Sign in instead
             </Link>
           </div>
           <button
@@ -65,7 +56,7 @@ const Signin = () => {
               marginBottom: "30px",
             }}
           >
-            SIGN IN
+           SEND REST EMAIL
           </button>
           <div
             style={{
@@ -108,6 +99,7 @@ const Signin = () => {
       </div>
     </div>
   );
-};
+  
+}
 
-export default Signin;
+export default Forgotpassword
