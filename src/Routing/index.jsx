@@ -6,6 +6,7 @@ import Offers from "../Pages/Offers";
 import Signin from "../Pages/Signin";
 import Profile from "../Pages/Profile";
 import Forgotpassword from "../Pages/Forgotpassword";
+import Signup from "../Pages/Signup";
 
 const Routing = () => {
   return (
@@ -18,6 +19,7 @@ const Routing = () => {
           <Route path="/offers" element={<Offers />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/Forgotpassword" element={<Forgotpassword/>} />
+          <Route path="/Signup" element={<Signup/>} />
         </Route>
       </Routes>
     </BrowserRouter>

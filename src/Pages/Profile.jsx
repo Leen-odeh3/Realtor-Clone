@@ -48,7 +48,7 @@ const Profile = () => {
               Do want to change your name?{" "}
               <Link style={{ color: "red" }}>Edit</Link>
             </p>
-            <Link to="/Signout" style={{ color: "#007aff" }}>
+            <Link to="/" style={{ color: "#007aff" }}>
               Sign out
             </Link>
           </div>
