@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 60px;
+    padding: 10px 60px;
+    box-shadow: 0px 2px 0px #e7e7e7;
 }
 
 .navs {
@@ -19,4 +20,5 @@ a {
 
 .active {
     color: black;
+    border-bottom: 2px solid rgb(235, 29, 29);
 }
