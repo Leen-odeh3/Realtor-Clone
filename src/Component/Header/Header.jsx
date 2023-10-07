@@ -1,11 +1,22 @@
-import React from 'react'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import style from "./Header.module.css";
 
 const Header = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const links = ["Home", "Offers", "Profile"];
 
-export default Header
+  return (
+    <div className={style.container}>
+      <img src="assets/logo.png" alt="logo-realtor" width="200px"/>
+      <div className={style.navs}>
+        {links.map((e, index) => (
+          <NavLink to={`/${e}`} key={index}>
+            {e}
+          </NavLink>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Header;
